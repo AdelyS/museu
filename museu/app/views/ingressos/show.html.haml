@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Tipo:
+  = @ingresso.tipo
+
+= link_to 'Edit', edit_ingresso_path(@ingresso)
+\|
+= link_to 'Back', ingressos_path
