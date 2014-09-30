@@ -1,0 +1,23 @@
+%h1 Listing autores
+
+%table
+  %tr
+    %th Nome
+    %th Nacionalidade
+    %th Resumobiografia
+    %th
+    %th
+    %th
+
+  - @autores.each do |autor|
+    %tr
+      %td= autor.nome
+      %td= autor.nacionalidade
+      %td= autor.resumoBiografia
+      %td= link_to 'Show', autor
+      %td= link_to 'Edit', edit_autor_path(autor)
+      %td= link_to 'Excluir', autor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Autor', new_autor_path

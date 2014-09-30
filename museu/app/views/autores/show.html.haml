@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @autor.nome
+%p
+  %b Nacionalidade:
+  = @autor.nacionalidade
+%p
+  %b Resumo da Biografia:
+  = @autor.resumoBiografia
+
+= link_to 'Edit', edit_autor_path(@autor)
+\|
+= link_to 'Back', autores_path

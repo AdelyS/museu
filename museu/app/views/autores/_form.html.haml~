@@ -1,0 +1,10 @@
+= simple_form_for(@autor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :nacionalidade
+    = f.input :resumoBiografia
+
+  .form-actions
+    = f.button :submit
