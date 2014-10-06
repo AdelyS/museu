@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Descricao:
+  = @tipo_peca.descricao
+
+= link_to 'Edit', edit_tipo_peca_path(@tipo_peca)
+\|
+= link_to 'Back', tipo_pecas_path

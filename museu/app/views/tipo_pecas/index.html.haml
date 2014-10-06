@@ -1,0 +1,19 @@
+%h1 Listing tipo_pecas
+
+%table
+  %tr
+    %th Descricao
+    %th
+    %th
+    %th
+
+  - @tipo_pecas.each do |tipo_peca|
+    %tr
+      %td= tipo_peca.descricao
+      %td= link_to 'Show', tipo_peca
+      %td= link_to 'Edit', edit_tipo_peca_path(tipo_peca)
+      %td= link_to 'Excluir', tipo_peca, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Tipo peca', new_tipo_peca_path
