@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006223520) do
+ActiveRecord::Schema.define(version: 20141006234536) do
 
   create_table "autores", force: true do |t|
     t.string   "nome"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20141006223520) do
 
   create_table "ingressos", force: true do |t|
     t.string   "tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "periodo_literarios", force: true do |t|
+    t.string   "nome"
+    t.integer  "anoInicio"
+    t.integer  "anoFim"
+    t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

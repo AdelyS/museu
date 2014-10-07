@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @periodo_literario.nome
+%p
+  %b Anoinicio:
+  = @periodo_literario.anoInicio
+%p
+  %b Anofim:
+  = @periodo_literario.anoFim
+%p
+  %b Descricao:
+  = @periodo_literario.descricao
+
+= link_to 'Edit', edit_periodo_literario_path(@periodo_literario)
+\|
+= link_to 'Back', periodo_literarios_path

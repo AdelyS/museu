@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :periodo_literarios
+
   resources :tipo_pecas
 
   resources :autores
