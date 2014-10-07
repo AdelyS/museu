@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @exposicao.nome
+%p
+  %b Paisorigem:
+  = @exposicao.paisOrigem
+
+= link_to 'Edit', edit_exposicao_path(@exposicao)
+\|
+= link_to 'Back', exposicoes_path

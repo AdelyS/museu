@@ -1,0 +1,21 @@
+%h1 Listing exposicoes
+
+%table
+  %tr
+    %th Nome
+    %th Paisorigem
+    %th
+    %th
+    %th
+
+  - @exposicoes.each do |exposicao|
+    %tr
+      %td= exposicao.nome
+      %td= exposicao.paisOrigem
+      %td= link_to 'Show', exposicao
+      %td= link_to 'Edit', edit_exposicao_path(exposicao)
+      %td= link_to 'Excluir', exposicao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Exposicao', new_exposicao_path
