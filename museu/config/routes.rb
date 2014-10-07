@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :museu_locais
+
   resources :exposicoes
 
   resources :periodo_literarios

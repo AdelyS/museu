@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @museu_local.nome
+%p
+  %b Endereco:
+  = @museu_local.endereco
+%p
+  %b Horario:
+  = @museu_local.horario
+
+= link_to 'Edit', edit_museu_local_path(@museu_local)
+\|
+= link_to 'Back', museu_locais_path

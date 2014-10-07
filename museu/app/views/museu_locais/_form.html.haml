@@ -1,0 +1,10 @@
+= simple_form_for(@museu_local) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :endereco
+    = f.input :horario
+
+  .form-actions
+    = f.button :submit, 'Salvar'

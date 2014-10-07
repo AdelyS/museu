@@ -1,0 +1,23 @@
+%h1 Listing museu_locais
+
+%table
+  %tr
+    %th Nome
+    %th Endereco
+    %th Horario
+    %th
+    %th
+    %th
+
+  - @museu_locais.each do |museu_local|
+    %tr
+      %td= museu_local.nome
+      %td= museu_local.endereco
+      %td= museu_local.horario
+      %td= link_to 'Show', museu_local
+      %td= link_to 'Edit', edit_museu_local_path(museu_local)
+      %td= link_to 'Destroy', museu_local, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Museu local', new_museu_local_path
