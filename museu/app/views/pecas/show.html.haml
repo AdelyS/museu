@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @peca.nome
+%p
+  %b Ano:
+  = @peca.ano
+%p
+  %b Descricao:
+  = @peca.descricao
+%p
+  %b Exposicao:
+  = @peca.exposicao.nome
+%p
+  %b Autor:
+  = @peca.autor.nome
+%p
+  %b Tipopeca:
+  = @peca.tipoPeca.descricao
+%p
+  %b Periodoliterario:
+  = @peca.periodoLiterario.nome
+
+= link_to 'Edit', edit_peca_path(@peca)
+\|
+= link_to 'Back', pecas_path

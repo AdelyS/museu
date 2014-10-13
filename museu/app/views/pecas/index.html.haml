@@ -1,0 +1,31 @@
+%h1 Listing pecas
+
+%table
+  %tr
+    %th Nome
+    %th Ano
+    %th Descricao
+    %th Exposicao
+    %th Autor
+    %th Tipopeca
+    %th Periodoliterario
+    %th
+    %th
+    %th
+
+  - @pecas.each do |peca|
+    %tr
+      %td= peca.nome
+      %td= peca.ano
+      %td= peca.descricao
+      %td= peca.exposicao.nome
+      %td= peca.autor.nome
+      %td= peca.tipoPeca.descricao
+      %td= peca.periodoLiterario.nome
+      %td= link_to 'Show', peca
+      %td= link_to 'Edit', edit_peca_path(peca)
+      %td= link_to 'Excluir', peca, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Peca', new_peca_path

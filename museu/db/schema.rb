@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013222126) do
+ActiveRecord::Schema.define(version: 20141013224813) do
 
   create_table "autores", force: true do |t|
     t.string   "nome"
@@ -52,6 +52,23 @@ ActiveRecord::Schema.define(version: 20141013222126) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "pecas", force: true do |t|
+    t.string   "nome"
+    t.integer  "ano"
+    t.string   "descricao"
+    t.integer  "exposicao_id"
+    t.integer  "autor_id"
+    t.integer  "tipoPeca_id"
+    t.integer  "periodoLiterario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pecas", ["autor_id"], name: "index_pecas_on_autor_id"
+  add_index "pecas", ["exposicao_id"], name: "index_pecas_on_exposicao_id"
+  add_index "pecas", ["periodoLiterario_id"], name: "index_pecas_on_periodoLiterario_id"
+  add_index "pecas", ["tipoPeca_id"], name: "index_pecas_on_tipoPeca_id"
 
   create_table "periodo_exposicoes", force: true do |t|
     t.date     "data_inicio"
