@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Data inicio:
+  = @periodo_exposicao.data_inicio
+%p
+  %b Data fim:
+  = @periodo_exposicao.data_fim
+%p
+  %b Museulocal:
+  = @periodo_exposicao.museuLocal.nome
+%p
+  %b Exposicao:
+  = @periodo_exposicao.exposicao.nome
+
+= link_to 'Edit', edit_periodo_exposicao_path(@periodo_exposicao)
+\|
+= link_to 'Back', periodo_exposicoes_path

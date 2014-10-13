@@ -1,0 +1,11 @@
+= simple_form_for(@periodo_exposicao) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data_inicio, as: :string
+    = f.input :data_fim, as: :string
+    = f.association :museuLocal, label_method: :nome
+    = f.association :exposicao, label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'

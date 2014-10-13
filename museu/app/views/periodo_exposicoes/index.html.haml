@@ -1,0 +1,25 @@
+%h1 Listing periodo_exposicoes
+
+%table
+  %tr
+    %th Data inicio
+    %th Data fim
+    %th Museulocal
+    %th Exposicao
+    %th
+    %th
+    %th
+
+  - @periodo_exposicoes.each do |periodo_exposicao|
+    %tr
+      %td= periodo_exposicao.data_inicio
+      %td= periodo_exposicao.data_fim
+      %td= periodo_exposicao.museuLocal.nome
+      %td= periodo_exposicao.exposicao.nome
+      %td= link_to 'Show', periodo_exposicao
+      %td= link_to 'Edit', edit_periodo_exposicao_path(periodo_exposicao)
+      %td= link_to 'Excluir', periodo_exposicao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Periodo exposicao', new_periodo_exposicao_path
