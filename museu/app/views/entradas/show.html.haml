@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Preco:
+  = @entrada.preco
+%p
+  %b Ingresso:
+  = @entrada.ingresso.tipo
+%p
+  %b Museulocal:
+  = @entrada.museuLocal.nome
+
+= link_to 'Edit', edit_entrada_path(@entrada)
+\|
+= link_to 'Back', entradas_path

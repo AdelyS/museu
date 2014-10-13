@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :entradas
+
   resources :museu_locais
 
   resources :exposicoes

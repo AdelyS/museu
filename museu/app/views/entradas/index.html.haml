@@ -1,0 +1,23 @@
+%h1 Listing entradas
+
+%table
+  %tr
+    %th Preco
+    %th Ingresso
+    %th Museulocal
+    %th
+    %th
+    %th
+
+  - @entradas.each do |entrada|
+    %tr
+      %td= entrada.preco
+      %td= entrada.ingresso.tipo
+      %td= entrada.museuLocal.nome
+      %td= link_to 'Show', entrada
+      %td= link_to 'Edit', edit_entrada_path(entrada)
+      %td= link_to 'Excluir', entrada, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Entrada', new_entrada_path

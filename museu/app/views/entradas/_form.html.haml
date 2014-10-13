@@ -1,0 +1,10 @@
+= simple_form_for(@entrada) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :preco
+    = f.association :ingresso , label_method: :tipo
+    = f.association :museuLocal , label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'
