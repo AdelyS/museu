@@ -17,12 +17,12 @@ feature 'gerenciar MuseuLocal' do
 	end
 	def preencher_e_verificar_museuLocal
 		fill_in 'Nome', :with => "nome"
-		fill_in 'Endereco', :with => "endereco"
-		fill_in 'Horario', :with => "horario"
+		fill_in 'Endereço', :with => "endereco"
+		fill_in 'Horário', :with => "horario"
 		click_button 'Salvar'
 		expect(page).to have_content 'Nome: nome'
-		expect(page).to have_content 'Endereco: endereco'
-		expect(page).to have_content 'Horario: horario'
+		expect(page).to have_content 'Endereço: endereco'
+		expect(page).to have_content 'Horário: horario'
 	end
 end
 

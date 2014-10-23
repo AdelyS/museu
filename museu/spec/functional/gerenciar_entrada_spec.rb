@@ -22,12 +22,12 @@ feature 'gerenciar Entrada' do
 		click_link 'Excluir'
 	end
 	def preencher_e_verificar_entrada
-		fill_in 'Preco', :with => "20.0"
+		fill_in 'Preço', :with => "20.0"
 		select 'meia', from: 'Ingresso'
-		select 'MAM', from: 'Museulocal'
+		select 'MAM', from: 'Museu'
 		click_button 'Salvar'
-		expect(page).to have_content 'Preco: 20.0'
+		expect(page).to have_content 'Preço: 20.0'
 		expect(page).to have_content 'Ingresso: meia'
-		expect(page).to have_content 'Museulocal: MAM'
+		expect(page).to have_content 'Museu: MAM'
 	end
 end

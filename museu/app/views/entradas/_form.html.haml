@@ -1,10 +1,14 @@
 = simple_form_for(@entrada) do |f|
   = f.error_notification
 
-  .form-inputs
-    = f.input :preco
+  .form-inputs.fa
+  %br
+    = f.input :preco, label:'Preço'
+    %br
     = f.association :ingresso , label_method: :tipo
-    = f.association :museuLocal , label_method: :nome
-
+    %br
+    = f.association :museuLocal , label_method: :nome, label:'Museu'
+    %br
+    %br
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar',:class => "btn btn-info"

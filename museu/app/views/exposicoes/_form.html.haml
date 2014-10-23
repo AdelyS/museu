@@ -1,9 +1,13 @@
 = simple_form_for(@exposicao) do |f|
   = f.error_notification
 
-  .form-inputs
+  .form-inputs.fa
+  %br
     = f.input :nome
-    = f.input :paisOrigem
+    %br
+    = f.input :paisOrigem, label: 'País Origem'
+    %br
+    %br
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar',:class => "btn btn-info"

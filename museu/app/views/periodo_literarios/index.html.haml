@@ -1,14 +1,14 @@
-%h1 Listing periodo_literarios
+%h1.fa.fa-edit.fa-3x Períodos Literários
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Nome
-    %th Anoinicio
-    %th Anofim
-    %th Descricao
-    %th
-    %th
-    %th
+    %th{:width => "80"} Nome
+    %th{:width => "100"} Ano Inicio
+    %th{:width => "100"} Ano Fim
+    %th{:width => "100"} Descrição
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @periodo_literarios.each do |periodo_literario|
     %tr
@@ -16,10 +16,10 @@
       %td= periodo_literario.anoInicio
       %td= periodo_literario.anoFim
       %td= periodo_literario.descricao
-      %td= link_to 'Show', periodo_literario
-      %td= link_to 'Edit', edit_periodo_literario_path(periodo_literario)
-      %td= link_to 'Excluir', periodo_literario, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', periodo_literario,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_periodo_literario_path(periodo_literario),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', periodo_literario, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Periodo literario', new_periodo_literario_path
+= link_to 'New Periodo literario', new_periodo_literario_path,:class => "btn btn-info"

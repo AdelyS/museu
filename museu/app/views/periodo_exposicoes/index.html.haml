@@ -1,14 +1,14 @@
-%h1 Listing periodo_exposicoes
+%h1.fa.fa-qrcode.fa-3x Períodos de Exposições
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Data inicio
-    %th Data fim
-    %th Museulocal
-    %th Exposicao
-    %th
-    %th
-    %th
+    %th{:width => "100"} Data inicio
+    %th{:width => "80"} Data fim
+    %th{:width => "100"} Museu
+    %th{:width => "80"} Exposição
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @periodo_exposicoes.each do |periodo_exposicao|
     %tr
@@ -16,10 +16,10 @@
       %td= periodo_exposicao.data_fim
       %td= periodo_exposicao.museuLocal.nome
       %td= periodo_exposicao.exposicao.nome
-      %td= link_to 'Show', periodo_exposicao
-      %td= link_to 'Edit', edit_periodo_exposicao_path(periodo_exposicao)
-      %td= link_to 'Excluir', periodo_exposicao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td{:width => "50"}= link_to 'Show', periodo_exposicao,:class => 'btn btn-warning btn-sm'
+      %td{:width => "50"}= link_to 'Edit', edit_periodo_exposicao_path(periodo_exposicao),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', periodo_exposicao, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Periodo exposicao', new_periodo_exposicao_path
+= link_to 'New Periodo exposicao', new_periodo_exposicao_path,:class => "btn btn-info"

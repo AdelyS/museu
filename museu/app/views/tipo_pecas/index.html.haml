@@ -1,19 +1,19 @@
-%h1 Listing tipo_pecas
+%h1.fa.fa-rocket Tipos de Peças
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Descricao
-    %th
-    %th
-    %th
+    %th{:width => "90"} Descrição
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @tipo_pecas.each do |tipo_peca|
     %tr
       %td= tipo_peca.descricao
-      %td= link_to 'Show', tipo_peca
-      %td= link_to 'Edit', edit_tipo_peca_path(tipo_peca)
-      %td= link_to 'Excluir', tipo_peca, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', tipo_peca,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_tipo_peca_path(tipo_peca),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', tipo_peca, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Tipo peca', new_tipo_peca_path
+= link_to 'New Tipo peca', new_tipo_peca_path,:class => "btn btn-info"

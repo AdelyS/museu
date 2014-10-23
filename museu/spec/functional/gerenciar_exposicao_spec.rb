@@ -17,10 +17,10 @@ feature 'gerenciar Exposicao' do
 	end
 	def preencher_e_verificar_exposicao
 		fill_in 'Nome', :with => "nome"
-		fill_in 'Paisorigem', :with => "pais"
+		fill_in 'País Origem', :with => "pais"
 		
 		click_button 'Salvar'
 		expect(page).to have_content 'Nome: nome'
-		expect(page).to have_content 'Paisorigem: pais'
+		expect(page).to have_content 'País Origem: pais'
 	end
 end

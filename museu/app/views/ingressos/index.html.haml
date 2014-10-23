@@ -1,19 +1,19 @@
-%h1 Listing ingressos
+%h1.fa.fa-bar-chart-o.fa-3x Ingressos
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Tipo
-    %th
-    %th
-    %th
+    %th{:width => "55"} Tipo
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @ingressos.each do |ingresso|
     %tr
       %td= ingresso.tipo
-      %td= link_to 'Show', ingresso
-      %td= link_to 'Edit', edit_ingresso_path(ingresso)
-      %td= link_to 'Excluir', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', ingresso,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_ingresso_path(ingresso),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', ingresso, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Ingresso', new_ingresso_path
+= link_to 'New Ingresso', new_ingresso_path,:class => "btn btn-info"

@@ -1,23 +1,23 @@
-%h1 Listing museu_locais
+%h1.fa.fa-dashboard.fa-3x Museus 
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Nome
-    %th Endereco
-    %th Horario
-    %th
-    %th
-    %th
+    %th{:width => "90"} Nome
+    %th{:width => "120"} Endereço
+    %th{:width => "100"} Horário
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @museu_locais.each do |museu_local|
     %tr
       %td= museu_local.nome
       %td= museu_local.endereco
       %td= museu_local.horario
-      %td= link_to 'Show', museu_local
-      %td= link_to 'Edit', edit_museu_local_path(museu_local)
-      %td= link_to 'Excluir', museu_local, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', museu_local,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_museu_local_path(museu_local) ,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', museu_local, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Museu local', new_museu_local_path
+= link_to 'New Museu local', new_museu_local_path ,:class => "btn btn-info"

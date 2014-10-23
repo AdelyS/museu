@@ -1,8 +1,10 @@
 = simple_form_for(@ingresso) do |f|
   = f.error_notification
 
-  .form-inputs
+  .form-inputs.fa
+  %br
     = f.input :tipo
-
+  %br
+  %br
   .form-actions
-    = f.submit 'Salvar'
+    = f.submit 'Salvar',:class => "btn btn-info"

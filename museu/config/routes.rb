@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  root :to =>"home#index"
+
   resources :pecas
 
   resources :periodo_exposicoes

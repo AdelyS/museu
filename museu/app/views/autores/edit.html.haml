@@ -1,7 +1,7 @@
-%h1 Editing autor
+%h1.fa.fa-bell-o Editar Autor
 
 = render 'form'
-
-= link_to 'Show', @autor
+%br
+= link_to 'Show', @autor,:class => 'btn btn-warning btn-sm'
 \|
-= link_to 'Back', autores_path
+= link_to 'Back', autores_path,:class => 'btn btn-warning btn-sm'

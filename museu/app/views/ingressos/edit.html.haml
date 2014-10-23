@@ -1,7 +1,7 @@
-%h1 Editing ingresso
+%h1.fa.fa-bar-chart-o.fa-3x  Editar Ingresso
 
 = render 'form'
-
-= link_to 'Show', @ingresso
+%br
+= link_to 'Show', @ingresso,:class => 'btn btn-warning btn-sm'
 \|
-= link_to 'Back', ingressos_path
+= link_to 'Back', ingressos_path,:class => 'btn btn-warning btn-sm'

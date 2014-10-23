@@ -1,8 +1,11 @@
 = simple_form_for(@tipo_peca) do |f|
   = f.error_notification
 
-  .form-inputs
-    = f.input :descricao
+  .form-inputs.fa
+  %br
+    = f.input :descricao, label:'Descrição'
+    %br
+    %br
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar',:class => "btn btn-info"

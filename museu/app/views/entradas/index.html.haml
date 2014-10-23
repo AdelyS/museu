@@ -1,23 +1,24 @@
-%h1 Listing entradas
+%h1.fa.fa-table.fa-3x Entradas
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Preco
-    %th Ingresso
-    %th Museulocal
-    %th
-    %th
-    %th
+    %th{:width => "60"}  Preço
+    %th{:width => "80"}  Ingresso
+    %th{:width => "100"}  Museu
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
+
 
   - @entradas.each do |entrada|
     %tr
       %td= entrada.preco
       %td= entrada.ingresso.tipo
       %td= entrada.museuLocal.nome
-      %td= link_to 'Show', entrada
-      %td= link_to 'Edit', edit_entrada_path(entrada)
-      %td= link_to 'Excluir', entrada, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', entrada,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_entrada_path(entrada),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', entrada, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Entrada', new_entrada_path
+= link_to 'New Entrada', new_entrada_path,:class => "btn btn-info"

@@ -7,21 +7,21 @@
   %b Ano:
   = @peca.ano
 %p
-  %b Descricao:
+  %b Descrição:
   = @peca.descricao
 %p
-  %b Exposicao:
+  %b Exposição:
   = @peca.exposicao.nome
 %p
   %b Autor:
   = @peca.autor.nome
 %p
-  %b Tipopeca:
+  %b Tipo de Peça:
   = @peca.tipoPeca.descricao
 %p
-  %b Periodoliterario:
+  %b Período Literário:
   = @peca.periodoLiterario.nome
 
-= link_to 'Edit', edit_peca_path(@peca)
+= link_to 'Edit', edit_peca_path(@peca),:class => 'btn btn-warning btn-sm'
 \|
-= link_to 'Back', pecas_path
+= link_to 'Back', pecas_path,:class => 'btn btn-warning btn-sm'

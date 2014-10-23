@@ -28,19 +28,19 @@ feature 'gerenciar Peca' do
 	def preencher_e_verificar_peca
 		fill_in 'Nome', :with => "nome"
 		fill_in 'Ano', :with => "73"
-		fill_in 'Descricao', :with => "descricao"
-		select 'expo', from: 'Exposicao'
+		fill_in 'Descrição', :with => "descricao"
+		select 'expo', from: 'Exposição'
 		select 'nome', from: 'Autor'
-		select 'quadro', from: 'Tipopeca'
-		select 'nome', from: 'Periodoliterario'
+		select 'quadro', from: 'Tipo de Peça'
+		select 'nome', from: 'Período Literário'
 		click_button 'Salvar'
 		expect(page).to have_content 'Nome: nome'
 		expect(page).to have_content 'Ano: 73'
-		expect(page).to have_content 'Descricao: descricao'
-		expect(page).to have_content 'Exposicao: expo'
+		expect(page).to have_content 'Descrição: descricao'
+		expect(page).to have_content 'Exposição: expo'
 		expect(page).to have_content 'Autor: nome'
-		expect(page).to have_content 'Tipopeca: quadro'
-		expect(page).to have_content 'Periodoliterario: nome'
+		expect(page).to have_content 'Tipo de Peça: quadro'
+		expect(page).to have_content 'Período Literário: nome'
 	end
 end
 

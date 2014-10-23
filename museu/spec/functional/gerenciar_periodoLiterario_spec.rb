@@ -17,13 +17,13 @@ click_link 'Excluir'
 end
 def preencher_e_verificar_periodoLiterario
 fill_in 'Nome', :with => 'nome'
-fill_in 'Anoinicio', :with => '123'
-fill_in 'Anofim', :with => '456'
-fill_in 'Descricao', :with => 'quadro'
+fill_in 'Ano inicio', :with => '123'
+fill_in 'Ano fim', :with => '456'
+fill_in 'Descrição', :with => 'quadro'
 click_button 'Salvar'
 expect(page).to have_content 'Nome: nome'
-expect(page).to have_content 'Anoinicio: 123'
-expect(page).to have_content 'Anofim: 456'
-expect(page).to have_content 'Descricao: quadro'
+expect(page).to have_content 'Ano inicio: 123'
+expect(page).to have_content 'Ano fim: 456'
+expect(page).to have_content 'Descrição: quadro'
 end
 end

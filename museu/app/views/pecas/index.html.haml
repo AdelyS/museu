@@ -1,17 +1,17 @@
-%h1 Listing pecas
+%h1.fa.fa-cloud.fa-3x Peças
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Nome
-    %th Ano
-    %th Descricao
-    %th Exposicao
-    %th Autor
-    %th Tipopeca
-    %th Periodoliterario
-    %th
-    %th
-    %th
+    %th{:width => "90"} Nome
+    %th{:width => "90"} Ano
+    %th{:width => "110"} Descrição
+    %th{:width => "110"} Exposição
+    %th{:width => "90"} Autor
+    %th{:width => "110"} Tipo de Peça
+    %th{:width => "130"} Período Literário
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @pecas.each do |peca|
     %tr
@@ -22,10 +22,10 @@
       %td= peca.autor.nome
       %td= peca.tipoPeca.descricao
       %td= peca.periodoLiterario.nome
-      %td= link_to 'Show', peca
-      %td= link_to 'Edit', edit_peca_path(peca)
-      %td= link_to 'Excluir', peca, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', peca,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_peca_path(peca),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', peca, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Peca', new_peca_path
+= link_to 'New Peca', new_peca_path,:class => "btn btn-info"

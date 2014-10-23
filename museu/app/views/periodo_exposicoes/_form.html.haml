@@ -1,11 +1,17 @@
 = simple_form_for(@periodo_exposicao) do |f|
   = f.error_notification
 
-  .form-inputs
+  .form-inputs.fa
+  %br
     = f.input :data_inicio, as: :string
+    %br
     = f.input :data_fim, as: :string
-    = f.association :museuLocal, label_method: :nome
-    = f.association :exposicao, label_method: :nome
+    %br
+    = f.association :museuLocal, label_method: :nome, label: 'Museu'
+    %br
+    = f.association :exposicao, label_method: :nome, label: 'Exposição'
+    %br
+    %br
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar',:class => "btn btn-info"

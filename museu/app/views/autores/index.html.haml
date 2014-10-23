@@ -1,23 +1,23 @@
-%h1 Listing autores
+%h1.fa.fa-bell-o Autores
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Nome
-    %th Nacionalidade
-    %th Resumobiografia
-    %th
-    %th
-    %th
+    %th{:width => "90"} Nome
+    %th{:width => "150"} Nacionalidade 
+    %th{:width => "160"} Resumo da Biografia
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @autores.each do |autor|
     %tr
       %td= autor.nome
       %td= autor.nacionalidade
       %td= autor.resumoBiografia
-      %td= link_to 'Show', autor
-      %td= link_to 'Edit', edit_autor_path(autor)
-      %td= link_to 'Excluir', autor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', autor,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_autor_path(autor),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', autor, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Autor', new_autor_path
+= link_to 'New Autor', new_autor_path,:class => "btn btn-info"

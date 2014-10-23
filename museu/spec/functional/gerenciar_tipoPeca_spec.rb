@@ -16,8 +16,8 @@ feature 'gerenciar TipoPeca' do
 		click_link 'Excluir'
 	end
 	def preencher_e_verificar_tipoPeca
-		fill_in 'Descricao', :with => 'quadro'
+		fill_in 'Descrição', :with => 'quadro'
 		click_button 'Salvar'
-		expect(page).to have_content 'Descricao: quadro'
+		expect(page).to have_content 'Descrição: quadro'
 	end
 end

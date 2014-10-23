@@ -24,13 +24,13 @@ feature 'gerenciar PeriodoExposicao' do
 	def preencher_e_verificar_periodo_exposicao
 		fill_in 'Data inicio', :with => "13/05/2014"
 		fill_in 'Data fim', :with => "13/06/2014"
-		select 'exposicao', from: 'Exposicao'
-		select 'MAM', from: 'Museulocal'
+		select 'exposicao', from: 'Exposição'
+		select 'MAM', from: 'Museu'
 		click_button 'Salvar'
 		expect(page).to have_content 'Data inicio: 2014-05-13'
 		expect(page).to have_content 'Data fim: 2014-06-13'
-		expect(page).to have_content 'Exposicao: exposicao'
-		expect(page).to have_content 'Museulocal: MAM'
+		expect(page).to have_content 'Exposição: exposicao'
+		expect(page).to have_content 'Museu: MAM'
 	end
 end
 

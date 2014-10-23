@@ -7,12 +7,12 @@
   %b Data fim:
   = @periodo_exposicao.data_fim
 %p
-  %b Museulocal:
+  %b Museu:
   = @periodo_exposicao.museuLocal.nome
 %p
-  %b Exposicao:
+  %b Exposição:
   = @periodo_exposicao.exposicao.nome
 
-= link_to 'Edit', edit_periodo_exposicao_path(@periodo_exposicao)
+= link_to 'Edit', edit_periodo_exposicao_path(@periodo_exposicao),:class => 'btn btn-warning btn-sm'
 \|
-= link_to 'Back', periodo_exposicoes_path
+= link_to 'Back', periodo_exposicoes_path,:class => 'btn btn-warning btn-sm'

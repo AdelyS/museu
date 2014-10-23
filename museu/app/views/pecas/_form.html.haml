@@ -1,14 +1,23 @@
 = simple_form_for(@peca) do |f|
   = f.error_notification
 
-  .form-inputs
+  .form-inputs.fa
+  %br
     = f.input :nome
+    %br
     = f.input :ano
-    = f.input :descricao
-    = f.association :exposicao, label_method: :nome
+    %br
+    = f.input :descricao, label:'Descrição'
+    %br
+    = f.association :exposicao, label_method: :nome, label:'Exposição'
+    %br
     = f.association :autor, label_method: :nome
-    = f.association :tipoPeca, label_method: :descricao
-    = f.association :periodoLiterario, label_method: :nome
+    %br
+    = f.association :tipoPeca, label_method: :descricao, label:'Tipo de Peça'
+    %br
+    = f.association :periodoLiterario, label_method: :nome, label:'Período Literário'
+    %br
+    %br
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar',:class => "btn btn-info"

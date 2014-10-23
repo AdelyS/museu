@@ -1,10 +1,16 @@
 = simple_form_for(@autor) do |f|
   = f.error_notification
 
-  .form-inputs
+  .form-inputs.fa
+  %br
     = f.input :nome
+    %br
     = f.input :nacionalidade
+    %br
     = f.input :resumoBiografia, label:"Resumo da Biografia"
+    %br
+    %br
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar',:class => "btn btn-info"
+

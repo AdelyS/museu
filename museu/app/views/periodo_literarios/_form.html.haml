@@ -1,11 +1,17 @@
 = simple_form_for(@periodo_literario) do |f|
   = f.error_notification
 
-  .form-inputs
+  .form-inputs.fa
+  %br
     = f.input :nome
-    = f.input :anoInicio
-    = f.input :anoFim
-    = f.input :descricao
+    %br
+    = f.input :anoInicio, label:'Ano inicio'
+    %br
+    = f.input :anoFim, label:'Ano fim'
+    %br
+    = f.input :descricao, label:'Descrição'
+    %br
+    
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar',:class => "btn btn-info"

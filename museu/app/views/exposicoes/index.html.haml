@@ -1,21 +1,21 @@
-%h1 Listing exposicoes
+%h1.fa.fa-desktop Exposições
 
-%table
+%table.table.table-striped.table-bordered.table-hover
   %tr
-    %th Nome
-    %th Paisorigem
-    %th
-    %th
-    %th
+    %th{:width => "100"}  Nome
+    %th{:width => "100"}  País Origem
+    %th{:width => "15"}
+    %th{:width => "15"}
+    %th{:width => "15"}
 
   - @exposicoes.each do |exposicao|
     %tr
       %td= exposicao.nome
       %td= exposicao.paisOrigem
-      %td= link_to 'Show', exposicao
-      %td= link_to 'Edit', edit_exposicao_path(exposicao)
-      %td= link_to 'Excluir', exposicao, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', exposicao,:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Edit', edit_exposicao_path(exposicao),:class => 'btn btn-warning btn-sm'
+      %td= link_to 'Excluir', exposicao, :method => :delete, :data => { :confirm => 'Are you sure?' },:class => 'btn btn-warning btn-sm'
 
 %br
 
-= link_to 'New Exposicao', new_exposicao_path
+= link_to 'New Exposicao', new_exposicao_path,:class => "btn btn-info"

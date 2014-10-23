@@ -4,9 +4,9 @@
   %b Nome:
   = @exposicao.nome
 %p
-  %b Paisorigem:
+  %b País Origem:
   = @exposicao.paisOrigem
 
-= link_to 'Edit', edit_exposicao_path(@exposicao)
+= link_to 'Edit', edit_exposicao_path(@exposicao),:class => 'btn btn-warning btn-sm'
 \|
-= link_to 'Back', exposicoes_path
+= link_to 'Back', exposicoes_path,:class => 'btn btn-warning btn-sm'
